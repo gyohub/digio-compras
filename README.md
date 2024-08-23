@@ -96,6 +96,7 @@ sequenceDiagram
 ### Testes Unitários
 
 Foram adicionados cerca de 20 testes unitários que juntos cobrem controller, service e repositórios JPA que possuem queries customizadas.
+
 <img width="554" alt="image" src="https://github.com/user-attachments/assets/1bfcd9eb-3c8c-480b-a5a7-b6fb9e6959b3">
 
 ### O que pode ser melhorado?
