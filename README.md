@@ -101,6 +101,8 @@ Foram adicionados cerca de 20 testes unitários que juntos cobrem controller, se
 
 ### O que pode ser melhorado?
 
+Este projeto pode ser considerado um MVP ou como sendo uma versão inicial. Abaixo listo o que pode-se melhorar para obtermos uma aplicação a nível de produção.
+
 #### Segurança da API
 - Adicionar mecanismo de autenticaçao baseado em [OAuthX com token tipo JWT](https://oauth.net/2/jwt/) ou
 - Considerar a utilizaçao de API Gateway em caso de necessidade de aumento de performance, monitoramento e segurança
@@ -114,9 +116,24 @@ Foram adicionados cerca de 20 testes unitários que juntos cobrem controller, se
 
 ### Tecnologias
 - Java 21
+- Apache Maven 3.9.7
 - Spring Cloud 2023.0.3
   - Spring Boot
   - JPA
   - Actuator
 - Banco de dados H2 em memória
 
+### Como executar o projeto?
+
+1. Clone este repositório e certifique-se de que sua máquina possua o Java 21 instalado.
+2. Se for a primeira vez rodando a aplicação, execute o build dentro da pasta do projeto: `./mvnw clean package`
+3. Execute a aplicação: `./mvnw springboot:run`
+
+Agora abra o browser e acesse os endpoints:
+
+- [GET /compras](http://localhost:8080/api/compras)
+- [GET /maior-compra/ano](http://localhost:8080/api/maior-compra/2020)
+- [GET /clientes-fieis](http://localhost:8080/api/clientes-fieis)
+- [GET /recomendacao/cliente/tipo](http://localhost:8080/api/recomendacao/03763001590/tipo)
+
+Para ver mais detalhes sobre o mapeamento dos endpoints acima, acesse o [Springboot Actuator](http://localhost:8080/actuator/mappings)
